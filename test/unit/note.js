@@ -11,7 +11,8 @@ var expect     = require('chai').expect,
     describe   = lab.describe,
     it         = lab.it,
     beforeEach = lab.beforeEach,
-    db         = h.getdb();
+    db         = h.getdb(),
+    fs         = require('fs');
 
 describe('Note', function(){
   var noteId;
@@ -30,6 +31,25 @@ describe('Note', function(){
       var n = new Note();
       expect(n).to.be.instanceof(Note);
       done();
+    });
+  });
+
+  describe('.upload', function(){
+    it('should upload an image', function(done){
+      var file = fs.createReadStream(__dirname + '/../fixtures/flag.png');
+      Note.upload({token:'tok'}, file, 'flag.png', noteId, function(err, results){
+        expect(err).to.be.null;
+        done();
+      });
+    });
+  });
+
+  describe('.uploadmobile', function(){
+    it('should upload a b64 encoded image', function(done){
+      Note.uploadmobile({token:'tok'}, 'b64image', noteId, function(err, results){
+        expect(err).to.be.null;
+        done();
+      });
     });
   });
 
