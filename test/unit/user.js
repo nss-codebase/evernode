@@ -1,13 +1,24 @@
+/* jshint expr:true */
+
 'use strict';
 
 var expect     = require('chai').expect,
+    cp         = require('child_process'),
+    h          = require('../helpers/helpers'),
     User       = require('../../server/models/user'),
     Lab        = require('lab'),
     lab        = exports.lab = Lab.script(),
     describe   = lab.describe,
-    it         = lab.it;
+    it         = lab.it,
+    beforeEach = lab.beforeEach,
+    db         = h.getdb();
 
 describe('User', function(){
+  beforeEach(function(done){
+    cp.execFile(__dirname + '/../scripts/clean-db.sh', [db], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
+      done();
+    });
+  });
 
   describe('constructor', function(){
     it('should create a User object', function(done){
@@ -19,4 +30,12 @@ describe('User', function(){
     });
   });
 
+  describe('.register', function(){
+    it('should register a new User', function(done){
+      User.register({username:'sam', password:'123', avatar:'http://images.apple.com/global/elements/flags/16x16/usa_2x.png'}, function(err){
+        expect(err).to.be.null;
+        done();
+      });
+    });
+  });
 });
