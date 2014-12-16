@@ -28,7 +28,7 @@ describe('Users', function(){
       };
 
       server.inject(options, function(response){
-        cookie = response.headers['set-cookie'][0].match(/hapi-cookie=[^;]+/)[0]
+        cookie = response.headers['set-cookie'][0].match(/hapi-cookie=[^;]+/)[0];
         done();
       });
     });

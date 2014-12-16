@@ -28,7 +28,7 @@ describe('Notes', function(){
       };
 
       server.inject(options1, function(response){
-        cookie = response.headers['set-cookie'][0].match(/hapi-cookie=[^;]+/)[0]
+        cookie = response.headers['set-cookie'][0].match(/hapi-cookie=[^;]+/)[0];
         var options2 = {
           method: 'post',
           url: '/notes',
