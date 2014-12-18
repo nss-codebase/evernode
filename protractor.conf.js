@@ -3,12 +3,16 @@ var config = {};
 config.seleniumAddress = 'http://localhost:4444/wd/hub';
 config.multiCapabilities = [
   {
+    'browserName': 'chrome'
+  },
+  {
     'browserName': 'firefox'
   }
 ];
 
 config.suites = {
-  homepage: 'test/e2e/homepage/**/*.spec.js'
+  homepage: 'test/e2e/homepage/**/*.spec.js',
+  authentication: 'test/e2e/authentication/**/*.spec.js'
 };
 
 config.jasmineNodeOpts = {
