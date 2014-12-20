@@ -23,11 +23,11 @@ env:
   global:
     - DATABASE_URL=postgres://postgres@localhost/evernode_test
     - AWS_BUCKET=chyld-evernode-test
-    # AWS_SECRET_ACCESS_KEY
-    - secure: D/AAUl7oPOOgIo/xn1jHMrTUwR6o3k3xlS+eqQxX7KV3u6v+iqjRn0Ddx1QqXmyDMPWGmdJNfepMb3Hhv7Df7ngkNio3aBWU75urByzWv2Rr0x9r+HuGY6HTWhsDCBGiZfgOnaZ+z/pxexSTe3zsNb0/56ZAtL39PWGssYsd4ts=
-    # AWS_ACCESS_KEY_ID
-    - secure: dinFaJJC9JdM1nHKgm36pmpYtNxZYUgPlbm8R35icjY44PeC+N8OGSzyIyOSvugk4sdxXMNQ282bU9QcPagBQotQvsaGM7Yu1wsXkKVuO8MsMgeLRmbynBFX6R35+akB7cvnBFjiTcWfwX3/9fKdbuyTm7ALJaV0HViNfhMezbs=
     # SAUCE_ACCESS_KEY
     - secure: aaNSTQd8d/Ofu7J2unsDLgUgXI0OR8TuZ5r4gjmv0nlpmy9g+ADiy/uNsmAanPRU/idcG6Bz5FF+E6dUxtkAUDhAGg5MNMH6nND1JZZHoqkLk8HYp1Q0VwGxdFYb4lhjJMW4C22Rq4BOdp+GXVUN4yZKxJIUeWKUFs/9eBaK/8U=
     # SAUCE_USERNAME
     - secure: kU+a+rDsqJWpsa0/Red9g5s6qGi7lMcAf1LFp25I4FtZOxAVf7vOZ1BGMtx/74jY1o3T4SpUBnjC/XHh8GsPcokQC5huXztEkIyYKAXlM0ZLURFooYmundWMiRrMr/Ir1zJdJ0hnchxsr1y+dw6s6TjuUKAEijKtECQ1DDZjdaI=
+    # AWS_SECRET_ACCESS_KEY
+    - secure: D/AAUl7oPOOgIo/xn1jHMrTUwR6o3k3xlS+eqQxX7KV3u6v+iqjRn0Ddx1QqXmyDMPWGmdJNfepMb3Hhv7Df7ngkNio3aBWU75urByzWv2Rr0x9r+HuGY6HTWhsDCBGiZfgOnaZ+z/pxexSTe3zsNb0/56ZAtL39PWGssYsd4ts=
+    # AWS_ACCESS_KEY_ID
+    - secure: dinFaJJC9JdM1nHKgm36pmpYtNxZYUgPlbm8R35icjY44PeC+N8OGSzyIyOSvugk4sdxXMNQ282bU9QcPagBQotQvsaGM7Yu1wsXkKVuO8MsMgeLRmbynBFX6R35+akB7cvnBFjiTcWfwX3/9fKdbuyTm7ALJaV0HViNfhMezbs=
