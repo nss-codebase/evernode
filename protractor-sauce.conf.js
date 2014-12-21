@@ -20,7 +20,7 @@ module.exports = {
     },
     {
       'browserName': 'chrome',
-      'platform' : 'OS X 10.10',
+      'platform' : 'OS X 10.9',
       'version' : '36',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
       'build': process.env.TRAVIS_BUILD_NUMBER,
@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       'browserName': 'chrome',
-      'platform' : 'OS X 10.10',
+      'platform' : 'OS X 10.9',
       'version' : '35',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
       'build': process.env.TRAVIS_BUILD_NUMBER,
