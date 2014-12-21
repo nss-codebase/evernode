@@ -1,11 +1,11 @@
 language: node_js
 node_js:
-  - "0.10.32"
+  - "0.10.33"
 services:
   - postgresql
 addons:
   postgresql: "9.3"
-  # sauce_connect: true
+  sauce_connect: true
 notifications:
   email: false
 script:
@@ -14,11 +14,11 @@ script:
 before_script:
   - psql -c 'create database evernode_test;' -U postgres
   - cd test/scripts; ./create-db.sh evernode_test; cd ../..;
-  # - PORT=9001 node server/index.js&
-  # - sleep 5
+  - PORT=9001 node server/index.js&
+  - sleep 5
 after_script:
   - npm run coveralls
-  # - npm run e2e
+  - npm run e2e
 env:
   global:
     - DATABASE_URL=postgres://postgres@localhost/evernode_test
