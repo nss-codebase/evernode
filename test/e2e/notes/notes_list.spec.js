@@ -13,7 +13,6 @@ describe('notes list', function(){
 
   it('should create a note', function(){
     create('a', 'b', 'c,d,e');
-
     expect(element(by.model('note.title')).getAttribute('value')).toEqual('');
     expect(element(by.model('note.body')).getAttribute('value')).toEqual('');
     expect(element(by.model('note.tags')).getAttribute('value')).toEqual('');
